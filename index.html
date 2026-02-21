@@ -1005,6 +1005,27 @@ updateCountdown();
       });
     }
 
+    // Music toggle
+  const musicBtn = document.getElementById("musicBtn");
+  const musicIcon = document.getElementById("musicIcon");
+  const bgMusic = document.getElementById("bgMusic");
+
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", () => {
+    if (!isPlaying) {
+      bgMusic.play().catch(() => {
+        console.log("Autoplay blocked, user must interact first.");
+      });
+      isPlaying = true;
+      musicIcon.innerHTML = '<path d="M9 19V6h13v2h-11v11h-2z"/>'; // change icon if you want
+    } else {
+      bgMusic.pause();
+      isPlaying = false;
+      musicIcon.innerHTML = '<path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>'; // revert icon
+    }
+  });
+
     // ==================== FIREWORKS BUTTON ====================
     function initFireworksButton() {
       const btn = document.getElementById('fireworksBtn');
@@ -1057,5 +1078,6 @@ updateCountdown();
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d0a272f4764a75a',t:'MTc3MTU1MDEyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
   </script>
 <audio id="celebrationSound" src="celebration.mp3" preload="auto"></audio>
+<audio id="bgMusic" src="https://soundcloud.com/ashamaluevmusic/happy-birthday?in=ashamaluevmusic2/sets/royalty-free-background-music&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" preload="auto"></audio>
 </body>
 </html>
