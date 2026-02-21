@@ -365,18 +365,31 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full">
-  <div id="app" class="app-wrapper bg-gradient-to-br from-blush via-cream to-blush"><!-- Floating Particles Background -->
-   <div id="particles" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div><!-- Music Control Button --> <button id="musicBtn" class="fixed top-6 right-6 z-50 w-12 h-12 rounded-full glass flex items-center justify-center transition-all duration-300 hover:scale-110 music-pulse" aria-label="Toggle music">
+  <div id="app" class="app-wrapper bg-gradient-to-br from-blush via-cream to-blush">
+    
+    <!-- Floating Particles Background -->
+   <div id="particles" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div>
+   
+   <!-- Music Control Button --> 
+    <button id="musicBtn" class="fixed top-6 right-6 z-50 w-12 h-12 rounded-full glass flex items-center justify-center transition-all duration-300 hover:scale-110 music-pulse" aria-label="Toggle music">
     <svg id="musicIcon" class="w-6 h-6 text-deep" fill="currentColor" viewbox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
-    </svg></button> <!-- Navigation Dots -->
+    </svg></button> 
+    
+    <!-- Navigation Dots -->
    <nav class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col gap-3"><a href="#hero" class="nav-dot w-3 h-3 rounded-full bg-rose opacity-50 hover:opacity-100 transition-opacity" aria-label="Go to hero section"></a> <a href="#message" class="nav-dot w-3 h-3 rounded-full bg-rose opacity-50 hover:opacity-100 transition-opacity" aria-label="Go to message section"></a> <a href="#surprise" class="nav-dot w-3 h-3 rounded-full bg-rose opacity-50 hover:opacity-100 transition-opacity" aria-label="Go to surprise section"></a> <a href="#wish" class="nav-dot w-3 h-3 rounded-full bg-rose opacity-50 hover:opacity-100 transition-opacity" aria-label="Go to wish section"></a>
-   </nav><!-- ==================== HERO SECTION ==================== -->
+   </nav>
+   
+   <!-- ==================== HERO SECTION ==================== -->
    <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center px-6 py-20">
-    <div class="relative z-10 text-center max-w-4xl mx-auto"><!-- Decorative elements -->
+    <div class="relative z-10 text-center max-w-4xl mx-auto">
+      
+      <!-- Decorative elements -->
      <div class="absolute -top-20 left-1/2 transform -translate-x-1/2 opacity-20">
       <svg class="w-40 h-40 text-lavender" viewbox="0 0 100 100" fill="currentColor"><path d="M50 0 L61 35 L98 35 L68 57 L79 91 L50 70 L21 91 L32 57 L2 35 L39 35 Z" />
       </svg>
-     </div><!-- Main title -->
+     </div>
+     
+     <!-- Main title -->
      <div class="fade-in-up" style="animation-delay: 0.2s;"><span class="inline-block text-lavender font-body text-sm md:text-base tracking-[0.3em] uppercase mb-4">✨ A Special Day ✨</span>
      </div>
      <h1 id="heroTitle" class="font-display text-4xl md:text-6xl lg:text-7xl text-deep leading-tight mb-6 fade-in-up glow" style="animation-delay: 0.4s;">Happy Birthday to the<br><span class="gradient-text italic">Most Special Person</span> <span class="heartbeat inline-block ml-2">❤️</span></h1>
@@ -393,26 +406,38 @@
        <div class="countdown-item glass-dark rounded-2xl p-4 md:p-6 min-w-[80px] md:min-w-[100px]"><span id="seconds" class="font-display text-3xl md:text-5xl text-deep block">00</span> <span class="font-body text-xs text-deep/60 uppercase tracking-wider">Seconds</span>
        </div>
       </div>
-     </div><!-- Birthday Mode Banner (hidden until the day) -->
+     </div>
+     
+     <!-- Birthday Mode Banner (hidden until the day) -->
      <div id="birthdayBanner" class="hidden mt-8 fade-in-up">
       <div class="glass-dark rounded-3xl p-8 md:p-12 relative overflow-hidden">
        <div class="absolute inset-0 shimmer"></div><span class="text-6xl md:text-8xl block mb-4">🎂</span>
        <h2 class="font-display text-3xl md:text-5xl text-deep glow">It's Your Birthday!</h2>
        <p class="font-body text-deep/70 mt-2">Today is all about you! 🎉</p>
       </div>
-     </div><!-- Scroll indicator -->
+     </div>
+     
+     <!-- Scroll indicator -->
      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator"><a href="#message" class="flex flex-col items-center text-deep/50 hover:text-deep transition-colors"> <span class="font-body text-xs uppercase tracking-widest mb-2">Scroll</span>
        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
        </svg></a>
      </div>
     </div>
-   </section><!-- ==================== PERSONAL MESSAGE SECTION ==================== -->
+   </section>
+   
+   <!-- ==================== PERSONAL MESSAGE SECTION ==================== -->
    <section id="message" class="relative min-h-screen flex items-center justify-center px-6 py-20 section-hidden">
-    <div class="max-w-3xl mx-auto w-full"><!-- Letter Card -->
+    <div class="max-w-3xl mx-auto w-full">
+      
+      <!-- Letter Card -->
      <div class="letter-envelope">
-      <div class="letter-card glass rounded-3xl p-8 md:p-12 relative"><!-- Ribbon -->
+      <div class="letter-card glass rounded-3xl p-8 md:p-12 relative">
+        
+        <!-- Ribbon -->
        <div class="ribbon"><span>With Love</span>
-       </div><!-- Decorative seal -->
+       </div>
+       
+       <!-- Decorative seal -->
        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-rose to-lavender flex items-center justify-center shadow-lg"><span class="text-white text-xl">💝</span>
        </div>
        <div class="mt-6">
@@ -426,31 +451,45 @@
          <p class="font-display text-xl text-deep italic">Forever yours,</p>
          <p class="font-body text-lavender mt-2">With all my heart 💕</p>
         </div>
-       </div><!-- Decorative corners -->
+       </div>
+       
+       <!-- Decorative corners -->
        <div class="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-rose/30 rounded-tl-lg"></div>
        <div class="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-rose/30 rounded-tr-lg"></div>
        <div class="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-rose/30 rounded-bl-lg"></div>
        <div class="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-rose/30 rounded-br-lg"></div>
       </div>
-     </div><!-- Floating hearts decoration -->
+     </div>
+     
+     <!-- Floating hearts decoration -->
      <div id="heartsContainer" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
     </div>
-   </section><!-- ==================== SURPRISE SECTION ==================== -->
+   </section>
+   
+   <!-- ==================== SURPRISE SECTION ==================== -->
    <section id="surprise" class="relative min-h-screen flex items-center justify-center px-6 py-20 section-hidden">
     <div class="max-w-4xl mx-auto w-full text-center"><!-- Gift box button -->
      <div id="giftBox" class="inline-block cursor-pointer transition-transform duration-300 hover:scale-105">
-      <div class="relative"><!-- Gift box visual -->
-       <div class="w-40 h-40 md:w-56 md:h-56 mx-auto relative"><!-- Box body -->
+      <div class="relative">
+        
+        <!-- Gift box visual -->
+       <div class="w-40 h-40 md:w-56 md:h-56 mx-auto relative">
+        
+        <!-- Box body -->
         <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-28 md:w-44 md:h-36 bg-gradient-to-br from-rose to-lavender rounded-lg shadow-xl">
          <div class="absolute inset-0 flex items-center justify-center">
           <div class="w-4 md:w-6 h-full bg-white/20"></div>
          </div>
-        </div><!-- Box lid -->
+        </div>
+        
+        <!-- Box lid -->
         <div id="giftLid" class="absolute bottom-24 md:bottom-32 left-1/2 transform -translate-x-1/2 w-36 h-8 md:w-48 md:h-10 bg-gradient-to-r from-rose to-lavender rounded-t-lg shadow-lg transition-all duration-500">
          <div class="absolute inset-0 flex items-center justify-center">
           <div class="w-4 md:w-6 h-full bg-white/20"></div>
          </div>
-        </div><!-- Ribbon bow -->
+        </div>
+        
+        <!-- Ribbon bow -->
         <div id="giftBow" class="absolute -top-2 md:-top-4 left-1/2 transform -translate-x-1/2 transition-all duration-500">
          <div class="flex items-center gap-1">
           <div class="w-8 h-8 md:w-12 md:h-12 bg-white/80 rounded-full"></div>
@@ -462,7 +501,9 @@
        <p class="font-display text-xl md:text-2xl text-deep mt-6 flex items-center justify-center gap-2"><span>Click for a Surprise</span> <span class="heartbeat">🎁</span></p>
        <p class="font-body text-sm text-deep/50 mt-2">Tap to reveal something special</p>
       </div>
-     </div><!-- Surprise Content (hidden initially) -->
+     </div>
+     
+     <!-- Surprise Content (hidden initially) -->
      <div id="surpriseContent" class="surprise-content mt-12">
       <div class="glass-dark rounded-3xl p-8 md:p-12 relative overflow-hidden">
        <div class="absolute inset-0 shimmer"></div>
@@ -478,12 +519,20 @@
       </div>
      </div>
     </div>
-   </section><!-- ==================== BIRTHDAY WISH ANIMATION SECTION ==================== -->
+   </section>
+   
+   <!-- ==================== BIRTHDAY WISH ANIMATION SECTION ==================== -->
    <section id="wish" class="relative min-h-screen flex items-center justify-center px-6 py-20 section-hidden overflow-hidden">
-    <div class="max-w-4xl mx-auto w-full text-center relative z-10"><!-- Animated cake -->
+    <div class="max-w-4xl mx-auto w-full text-center relative z-10">
+      
+      <!-- Animated cake -->
      <div class="mb-12">
-      <div class="inline-block relative"><!-- Cake tiers -->
-       <div class="relative"><!-- Top tier -->
+      <div class="inline-block relative">
+        
+        <!-- Cake tiers -->
+       <div class="relative">
+        
+        <!-- Top tier -->
         <div class="w-20 h-12 md:w-28 md:h-16 mx-auto bg-gradient-to-b from-blush to-rose rounded-t-full relative"><!-- Candles -->
          <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 flex gap-2">
           <div class="candle">
@@ -499,22 +548,33 @@
            <div class="flame w-2 h-3 bg-gradient-to-t from-yellow-400 to-orange-300 rounded-full animate-pulse absolute -top-2 left-1/2 transform -translate-x-1/2" style="animation-delay: 0.4s;"></div>
           </div>
          </div>
-        </div><!-- Middle tier -->
+        </div>
+        
+        <!-- Middle tier -->
         <div class="w-32 h-10 md:w-44 md:h-14 mx-auto bg-gradient-to-b from-rose to-lavender -mt-1"></div><!-- Bottom tier -->
         <div class="w-44 h-12 md:w-60 md:h-16 mx-auto bg-gradient-to-b from-lavender to-deep rounded-b-lg -mt-1"></div><!-- Cake stand -->
         <div class="w-52 h-4 md:w-72 md:h-5 mx-auto bg-gradient-to-r from-rose/50 via-white to-rose/50 rounded-full mt-2"></div>
        </div>
       </div>
-     </div><!-- Main wish text -->
+     </div
+     
+     ><!-- Main wish text -->
      <div class="space-y-6">
       <h2 class="font-display text-4xl md:text-6xl lg:text-7xl text-deep leading-tight"><span class="block fade-in-up" style="animation-delay: 0.2s;">Happy Birthday</span> <span class="block gradient-text text-5xl md:text-7xl lg:text-8xl mt-4 fade-in-up glow" style="animation-delay: 0.4s;">23rd March</span></h2>
       <p class="font-body text-xl md:text-2xl text-deep/70 fade-in-up" style="animation-delay: 0.6s;">🎉 A day to celebrate the most wonderful you! 🎉</p><!-- Celebration emojis -->
       <div class="flex flex-wrap justify-center gap-4 mt-8 fade-in-up" style="animation-delay: 0.8s;"><span class="text-4xl md:text-5xl animate-bounce" style="animation-delay: 0s;">🎈</span> <span class="text-4xl md:text-5xl animate-bounce" style="animation-delay: 0.1s;">🎊</span> <span class="text-4xl md:text-5xl animate-bounce" style="animation-delay: 0.2s;">🎂</span> <span class="text-4xl md:text-5xl animate-bounce" style="animation-delay: 0.3s;">🎁</span> <span class="text-4xl md:text-5xl animate-bounce" style="animation-delay: 0.4s;">🎉</span>
-      </div><!-- Trigger fireworks button --> <button id="fireworksBtn" class="btn-glow mt-8 px-8 py-4 bg-gradient-to-r from-rose to-lavender rounded-full font-body text-white text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"> <span class="flex items-center gap-2"> <span>🎆</span> <span>Celebrate!</span> <span>🎆</span> </span> </button>
+      </div>
+
+      <!-- Trigger fireworks button -->
+        <button id="fireworksBtn" class="btn-glow mt-8 px-8 py-4 bg-gradient-to-r from-rose to-lavender rounded-full font-body text-white text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"> <span class="flex items-center gap-2"> <span>🎆</span> <span>Celebrate!</span> <span>🎆</span> </span> </button>
      </div>
-    </div><!-- Fireworks container -->
+    </div>
+
+    <!-- Fireworks container -->
     <div id="fireworksContainer" class="fixed inset-0 pointer-events-none z-50"></div>
-   </section><!-- ==================== FOOTER ==================== -->
+   </section>
+
+   <!-- ==================== FOOTER ==================== -->
    <footer class="relative py-16 px-6 section-hidden">
     <div class="max-w-2xl mx-auto text-center">
      <div class="glass rounded-3xl p-8 md:p-12">
@@ -527,7 +587,9 @@
        <p class="font-body text-sm text-deep/40">✨ Happy Birthday • 23rd March ✨</p>
       </div>
      </div>
-    </div><!-- Decorative stars -->
+    </div>
+
+    <!-- Decorative stars -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
      <div class="star absolute top-10 left-10 text-rose/30 text-2xl" style="animation-delay: 0s;">
       ✦
@@ -543,9 +605,12 @@
      </div>
     </div>
    </footer>
-  </div><!-- Confetti Container -->
+  </div>
+  
+  <!-- Confetti Container -->
   <div id="confettiContainer" class="confetti"></div>
   <script>
+
     // ==================== CONFIGURATION ====================
     const defaultConfig = {
       hero_title: "Happy Birthday to the Most Special Person",
@@ -989,5 +1054,8 @@ updateCountdown();
     // Initialize SDK immediately
     initElementSdk();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d0a272f4764a75a',t:'MTc3MTU1MDEyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d0a272f4764a75a',t:'MTc3MTU1MDEyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+  </script>
+<audio id="celebrationSound" src="celebration.mp3" preload="auto"></audio>
+</body>
 </html>
