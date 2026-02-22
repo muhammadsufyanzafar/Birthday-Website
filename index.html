@@ -372,6 +372,7 @@
  <body class="h-full">
   <audio id="celebrationSound" src="celebration.mp3" preload="auto"></audio>
   <audio id="bgMusic" src="Happy Birthday To You Ji.mp3" preload="auto"></audio>
+  <audio id="fireworks-audio" src="Fireworks.mp3"></audio>
 
   <div id="app" class="app-wrapper bg-gradient-to-br from-blush via-cream to-blush">
     
@@ -582,6 +583,8 @@
     <!-- Fireworks container -->
     <div id="fireworksContainer" class="fixed inset-0 pointer-events-none z-50"></div>
    </section>
+
+   
 
    <!-- ==================== FOOTER ==================== -->
    <footer class="relative py-16 px-6 section-hidden">
@@ -882,46 +885,50 @@ updateCountdown();
       }
     }
 
-    // ==================== FIREWORKS ====================
-    function createFireworks() {
-      const container = document.getElementById('fireworksContainer');
-      const colors = ['#E8A0BF', '#BA90C6', '#FFD700', '#FF69B4', '#00CED1', '#9370DB'];
+function createFireworks() {
+  // Play fireworks sound
+  const audio = document.getElementById("fireworks-audio");
+  audio.currentTime = 0; // restart sound if clicked multiple times
+  audio.play();
+
+  const container = document.getElementById('fireworksContainer');
+  const colors = ['#E8A0BF', '#BA90C6', '#FFD700', '#FF69B4', '#00CED1', '#9370DB'];
+  
+  for (let fw = 0; fw < 5; fw++) {
+    setTimeout(() => {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * (window.innerHeight * 0.6);
+      const color = colors[Math.floor(Math.random() * colors.length)];
       
-      for (let fw = 0; fw < 5; fw++) {
-        setTimeout(() => {
-          const x = Math.random() * window.innerWidth;
-          const y = Math.random() * (window.innerHeight * 0.6);
-          const color = colors[Math.floor(Math.random() * colors.length)];
-          
-          for (let i = 0; i < 30; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'firework';
-            particle.style.left = `${x}px`;
-            particle.style.top = `${y}px`;
-            particle.style.backgroundColor = color;
-            particle.style.boxShadow = `0 0 6px ${color}, 0 0 12px ${color}`;
-            
-            const angle = (i / 30) * 360;
-            const distance = 50 + Math.random() * 100;
-            const tx = Math.cos(angle * Math.PI / 180) * distance;
-            const ty = Math.sin(angle * Math.PI / 180) * distance;
-            
-            particle.style.setProperty('--tx', `${tx}px`);
-            particle.style.setProperty('--ty', `${ty}px`);
-            particle.animate([
-              { transform: 'translate(0, 0) scale(1)', opacity: 1 },
-              { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
-            ], {
-              duration: 1000 + Math.random() * 500,
-              easing: 'ease-out'
-            });
-            
-            container.appendChild(particle);
-            setTimeout(() => particle.remove(), 1500);
-          }
-        }, fw * 500);
+      for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'firework';
+        particle.style.left = `${x}px`;
+        particle.style.top = `${y}px`;
+        particle.style.backgroundColor = color;
+        particle.style.boxShadow = `0 0 6px ${color}, 0 0 12px ${color}`;
+        
+        const angle = (i / 30) * 360;
+        const distance = 50 + Math.random() * 100;
+        const tx = Math.cos(angle * Math.PI / 180) * distance;
+        const ty = Math.sin(angle * Math.PI / 180) * distance;
+        
+        particle.style.setProperty('--tx', `${tx}px`);
+        particle.style.setProperty('--ty', `${ty}px`);
+        particle.animate([
+          { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+          { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
+        ], {
+          duration: 1000 + Math.random() * 500,
+          easing: 'ease-out'
+        });
+        
+        container.appendChild(particle);
+        setTimeout(() => particle.remove(), 1500);
       }
-    }
+    }, fw * 500);
+  }
+}
 
     // ==================== FLOATING HEARTS ====================
     function createFloatingHearts() {
